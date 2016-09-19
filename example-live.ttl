@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/sw2016/> .
+
+
+ex:ourHouse  rdf:type        ex:House .
+
+ex:ourForest a				 ex:Forest .
+
+ex:locatedIn rdfs:range      ex:Location .
+
+ex:ourHouse ex:locatedIn	 ex:ourForest ;
+			ex:locatedIn 	 dbpedia:Castricum .
+ex:ourTree  ex:locatedIn	 ex:ourForest .
+
+ex:ourForest	a 			ex:Location .
+
+ex:ourForest	rdfs:label	"Our forest"@en ;
+				rdfs:label	"Ons bos"@nl .
+ex:ourHouse     rdfs:label	"Our house"@en ;
+				rdfs:label	"Ons huis"@nl .
